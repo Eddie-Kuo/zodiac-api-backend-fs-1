@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../lib/app');
 const { zodiacs } = require('../lib/zodiac-data');
-const { horoscopes } = require('../lib/horoscopes-data');
+// const { horoscopes } = require('../lib/horoscopes-data');
 
 // describe('example test - you should probably update me', () => {
 //   it('home route should return hello world', async () => {
@@ -39,10 +39,8 @@ describe('horoscope routes', () => {
   test('/horoscope/:sign route returns the corresponding horoscope', async () => {
     const res = await request(app).get('/horoscope/aquarius');
     const expected = {
-      id: '1',
       sign: 'aquarius',
-      dates: 'Jan 21 - Feb 19',
-      symbol: 'Water Bearer',
+      horoscope: 'https://ohmanda.com/api/horoscope/aquarius',
     };
     expect(res.body).toEqual(expected);
   });

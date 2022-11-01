@@ -3,12 +3,12 @@ const app = require('../lib/app');
 const { zodiacs } = require('../lib/zodiac-data');
 const { horoscopes } = require('../lib/horoscopes-data');
 
-describe('example test - you should probably update me', () => {
-  it('home route should return hello world', async () => {
-    const resp = await request(app).get('/');
-    expect(resp.text).toEqual('hello world!');
-  });
-});
+// describe('example test - you should probably update me', () => {
+//   it('home route should return hello world', async () => {
+//     const resp = await request(app).get('/');
+//     expect(resp.text).toEqual('hello world!');
+//   });
+// });
 
 // test 1 is expected to show list of all zodiac names and id on /zodiac route
 

@@ -7,3 +7,6 @@ describe('example test - you should probably update me', () => {
     expect(resp.text).toEqual('hello world!');
   });
 });
+
+// test 1 is expected to show list of all zodiac names and id on /zodiac route
+// test 2 is expected to show details of the zodiac based on the id

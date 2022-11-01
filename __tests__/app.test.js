@@ -15,6 +15,7 @@ const { zodiacs } = require('../lib/zodiac-data');
 describe('zodiac routes', () => {
   test('/zodiac route should display list of zodiac names with id', async () => {
     const res = await request(app).get('/zodiac');
+    // making a get request from 'app' with '/zodiac' controller
     const expected = zodiacs.map((zodiac) => {
       return { id: zodiac.id, name: zodiac.name };
     });
@@ -32,9 +33,9 @@ describe('zodiac routes', () => {
     };
     expect(res.body).toEqual(expected);
   });
-  // test 3 is expected to show the horoscope route from an object we need to make
 });
 
+// test 3 is expected to show the horoscope route from an object we need to make
 describe('horoscope routes', () => {
   test('/horoscope/:sign route returns the corresponding horoscope', async () => {
     const res = await request(app).get('/horoscope/aquarius');
